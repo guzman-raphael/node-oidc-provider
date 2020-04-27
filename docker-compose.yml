@@ -1,0 +1,22 @@
+version: '2.4'
+services:
+  oauth2_demo:
+    build:
+      context: .
+    environment:
+      - DEBUG=oidc-provider:*
+    image: example/oauth2:v0.0.0
+    # working_dir: /tmp
+    ports:
+    - 3000:3000
+    - 9222:9222
+    # volumes:
+    #   - ./example_inputs:/config
+      # - ./data:/data
+    # command: /config/cluster_input.env create
+    # command: /config/cluster_input.env destroy
+    # command: /config/cluster_input.env connect
+# networks:
+#   default:
+#     external:
+#       name: datajoint-matlab_main
